@@ -5,7 +5,6 @@
  */
 package app.presentation;
 
-import app.beans.Hotel;
 import app.workers.Worker;
 import java.net.URL;
 import java.util.ResourceBundle;
