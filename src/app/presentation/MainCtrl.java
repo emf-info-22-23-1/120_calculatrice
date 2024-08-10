@@ -5,6 +5,8 @@
  */
 package app.presentation;
 
+import app.beans.Hotel;
+import app.workers.Worker;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.application.Platform;
@@ -26,28 +28,17 @@ import app.helpers.JfxPopup;
  */
 public class MainCtrl implements Initializable {
 
+    public Worker wrk;
 
-    
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-
+        wrk = new Worker();
     }
-
 
     public void quitter() {
         // faire qq chose avant de quitter
-        // wrk.fermerBD();
-        // System.out.println("Je vous quitte !");
-
-        // obligatoire pour bien terminer une application JavaFX
-        boolean quitter = JfxPopup.askConfirmation("Quitter", "", "Voulez-vous vraiment quitter l'application ?");
-        
-        if(quitter == true){
-            Platform.exit();
-        }
     }
-
 }
